@@ -1,15 +1,9 @@
-// elementos
-
 const inputNome = document.querySelector("input#nome");
 const inputTelefone = document.querySelector("input#telefone");
 const textAreaMensagem = document.querySelector("textarea#mensagem");
 const buttonEnviar = document.querySelector("button#enviar");
 
-// Eventos no Script
-
 buttonEnviar.addEventListener("click", enviarFormulario);
-
-// Função Callback
 
 function enviarFormulario() {
   const nome = inputNome.value;
@@ -20,13 +14,18 @@ function enviarFormulario() {
   enviarParaDiscord(dados);
 }
 
-// Funções Auxiliares
-
 function prepararDados(nome, telefone, mensagem) {
   const dados = {
-    content: `Nova mensagem no formulário! \n\nNome: ${nome}\nTelefone: ${telefone}\nMensagem: ${mensagem}`,
-    embeds: null,
-    attachments: [],
+    content: `:green_circle: **Ei, Jônatas! Nova mensagem no formulário!**
+
+    :person:
+    **Nome**: ${nome}
+
+    :telephone:
+    **Telefone**: ${telefone}
+
+    :envelope:
+    **Mensagem**: ${mensagem}`,
   };
 
   return JSON.stringify(dados);
@@ -44,5 +43,12 @@ function enviarParaDiscord(dados) {
     .fetch(url, config)
     .then((response) => response.json())
     .then((json) => console.log(json))
+    .then(limparDados())
     .catch((error) => console.log(error.message));
+}
+
+function limparDados() {
+  inputNome.value = "";
+  inputTelefone.value = "";
+  textAreaMensagem.value = "";
 }
