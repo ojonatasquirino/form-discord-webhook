@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100dvh;
+  background-color: #000000;
+
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+@font-face {
+  font-family: 'bold';
+  font-weight: normal;
+  src: url('./assets/Figtree-Bold.woff');
+}
+@font-face {
+  font-family: 'light';
+  font-weight: normal;
+  src: url('./assets/Figtree-Light.woff');
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffffff12;
+  border: 1px solid #ffffff1e;
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.formulario h1 {
+  font-family: 'bold';
+  font-size: 25px;
+  color: #fff;
+  margin: 20px 0 0 0;
+}
+.formulario p {
+  font-family: 'light';
+  font-size: 20px;
+  color: #fff;
+  line-height: 1.5;
+  margin: 10px 0 20px 0;
+}
+.formulario input {
+  font-family: 'light';
+  font-size: 15px;
+  color: #ffffff;
+  width: 100%;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #ffffff16;
+  margin: 0 0 10px 0;
+  transition: all 0.3s;
+}
+.formulario input::placeholder {
+  opacity: 1;
+  color: #ffffffd4;
+}
+.formulario input:focus {
+  background-color: #ffffff1e;
+}
+.formulario textarea {
+  font-family: 'light';
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.5;
+  width: 100%;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #ffffff16;
+  resize: none;
+  margin: 0 0 20px 0;
+  transition: all 0.3s;
+}
+.formulario textarea::placeholder {
+  opacity: 1;
+  color: #ffffff8d;
+}
+.formulario textarea:focus {
+  background-color: #ffffff1e;
+}
+.formulario button {
+  font-family: 'bold';
+  font-size: 25px;
+  color: #fff;
+  width: 100%;
+  padding: 30px 25px;
+  border-radius: 10px;
+  background-color: #fff;
+  background: #000;
+  margin: 0 0 10px 0;
+  transition: all 0.3s;
+}
+.formulario button:hover {
+  background: #ffffff;
+  color: #000000;
+  cursor: pointer;
+}
